@@ -80,6 +80,7 @@ border-bottom: none;
 
 .header__info > h4{
   margin-left: 10px;
+  font-weight: lighter;
 }
 
 .header__right {
