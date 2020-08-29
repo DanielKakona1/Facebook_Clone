@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Feed, Header, Sidebar} from './components'
+import {Feed, Header, Sidebar, Widget} from './components'
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <div className="app__body">
         <Sidebar/>
         <Feed/>
+        <Widget/>
       </div>
     </div>
   );

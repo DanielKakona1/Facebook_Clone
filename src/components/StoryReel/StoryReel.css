@@ -1,6 +1,6 @@
 .storyReel{
   display: flex;
- /*  width: 600px; */
+   width: 100%;
   overflow: scroll;
 }
 /* Hide scrollbar for chrome, Safari and Opera */
