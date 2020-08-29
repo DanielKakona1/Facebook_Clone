@@ -52,8 +52,8 @@ const Sidebar = (props: Props) => {
   return (
     <div className='sidebar'>
  <SidebarRaw info={user}/> 
-{data.map((data)=> (
-  <SidebarRaw info={data} />
+{data.map((data,id)=> (
+  <SidebarRaw key={id} info={data} />
 ))}
       
     </div>
