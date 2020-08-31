@@ -1,3 +1,5 @@
+
+import firebase from 'firebase'
 export const firebaseConfig = {
   apiKey: "AIzaSyBYQHNeagNcxzkErURGAZsdnTIe00vTxMY",
   authDomain: "facebook-clone-91564.firebaseapp.com",
@@ -8,3 +10,11 @@ export const firebaseConfig = {
   appId: "1:1029640174914:web:0d64dac31a07f20e69dcdb",
   measurementId: "G-8SPJZ5SQJP"
 };
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+
+export {auth, provider}
+export default db;

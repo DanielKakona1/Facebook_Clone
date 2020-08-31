@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import './App.css';
-import {Feed, Header, Sidebar, Widget} from './components'
+import { Home, Login } from './pages';
+import reducer, { initialState } from './reducer';
+import { useStateValue } from './StateProvider';
 
 function App() {
+  
+  const [state, dispatch] = useReducer(reducer,initialState)
   return (
     <div className="app">
-      <Header/>
-      <div className="app__body">
-        <Sidebar/>
-        <Feed/>
-        <Widget/>
-      </div>
+      {!state.user  ? 
+      (<Login/>) : 
+      (<Home/>)
+      }
+
     </div>
   );
 }
