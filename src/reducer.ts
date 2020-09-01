@@ -1,17 +1,21 @@
-export const initialState ={
-  user:null
-
+type StateType = {
+  user: any
 }
 
-export type initialStateType = typeof initialState;
+export const initialState: StateType = {
+  user: null
+}
 
-export const actionTypes = {
-  SET_USER: 'SET_USER'
+
+// Action Types
+export enum actionTypes  {
+  SET_USER = 'SET_USER'
 }
 
 export type Action = | {type: 'SET_USER'; user:object } 
 
-const reducer = (state : initialStateType, action: any) => {
+// Reducer
+const reducer = (state:StateType , action: any) => {
 console.log('Actionnn',action);
 switch(action.type){
   case actionTypes.SET_USER :
