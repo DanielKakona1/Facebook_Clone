@@ -12,8 +12,10 @@ interface posts {
   data: Document
 }
 
+type postType = posts[]
+
 const Feed = (props: Props) => {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState<postType>([])
 
   useEffect(() => {
     db.collection('posts')
